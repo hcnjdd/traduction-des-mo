@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المترجم السريع</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="projet.js"></script>
+    <link rel="stylesheet" href="projet.css">
+    
+</head>
+<body>
+
+    <h1>🎯 المترجم السريع 🎯</h1>
+    <p>أدخل الترجمة الصحيحة في <strong>10 ثواني</strong> قبل ما يطيح الوقت!</p>
+    
+    <button id="startBtn" onclick="startGame()">ابدأ اللعبة</button>
+    <button id="hintBtn" class="hidden" onclick="giveHint()">إعطاء تلميح</button>
+
+    <div class="word-box hidden" id="word">...</div>
+    <br>
+    <input type="text" id="answer" class="hidden" placeholder="اكتب الترجمة هنا">
+    <button id="checkBtn" class="hidden" onclick="checkAnswer()">تحقق</button>
+    <p>⏳ الوقت: <span id="timer">10</span> ثانية</p>
+    <p>✅ نقاطك: <span id="score">0</span></p>
+    <p>❌ محاولات خاطئة: <span id="errors">0</span>/3</p>
+
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+</body>
+</html>
